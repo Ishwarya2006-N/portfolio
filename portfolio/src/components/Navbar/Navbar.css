@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    background-color: #bfd6c4;
+    color: black;
+    padding: 25px;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+  left: 0;
+  right: 0;
+ 
+}
+.sec {
+    display: flex;
+    margin-left: 850px;
+}
+.name{
+    margin-left: 20px;
+}
+.sec h4{
+    margin-left: 35px;
+    cursor: pointer;
+}
+.sec h4:hover{
+    color: white;
+}
