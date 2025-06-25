@@ -29,7 +29,8 @@
     height: 300px;
     margin-left: 50px;
     margin-right: 50px;
-    
+    overflow: hidden;
+    text-overflow: hidden;
 }
 .one:hover {
     transform: scale(0.95); 
