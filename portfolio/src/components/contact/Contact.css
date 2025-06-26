@@ -1,38 +1,55 @@
-.contact{
-    margin-top: 60px;
-   
+.contact {
+  margin-top: 60px;
+  padding: 0 20px;
 }
-.head{
-    margin-top: 30px;
+
+.head {
+  margin-top: 30px;
+  text-align: center;
 }
-.underline{
-    background-color: #bfd6c4;
-    width: 80px;
-    margin-left: 720px
+
+.underline {
+  background-color: #bfd6c4;
+  width: 80px;
+  height: 4px;
+  border-radius: 3px;
+  margin: 16px auto;
 }
-.contact-col{
-    max-width: 800px;
-    margin-left: 350px;
-    margin-top: 60px;
+
+.contact-col {
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-.contact form input,.contact form textarea{
-    display: block;
-    width: 100%;
-    background:  #eff4f0;
-    padding: 15px;
-    border: 0;
-    outline: 0;
-    margin-bottom: 15px;
-    margin-top: 8px;
-    resize: none;
-    border-radius: 5px;
+
+.contact form input,
+.contact form textarea {
+  display: block;
+  width: 100%;
+  background:#e3f2e6;
+  padding: 15px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 15px;
+  margin-top: 14px;
+  resize: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  max-width: 750px;
 }
-.contact-col span{
-    display: block;
-    margin: 20px 0;
-}   
-button{
-  background:  #bfd6c4;
+
+.contact-col span {
+  display: block;
+  margin: 20px 0;
+  color: #fafffb;
+  font-weight: bold;
+}
+
+button {
+  background: #bfd6c4;
   color: #212121;
   padding: 10px 25px;
   font-size: 16px;
@@ -43,4 +60,27 @@ button{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #a5cbb4;
+}
+
+/* ✅ Responsive for small screens */
+@media (max-width: 600px) {
+  /* .head h1 {
+    font-size: 1.8rem;
+  } */
+
+  .contact-col {
+    /* padding: 20px; */
+    max-width: 700px;
+    padding-left: 2px;
+  }
+
+  button {
+    width: 100%;
+  }
 }

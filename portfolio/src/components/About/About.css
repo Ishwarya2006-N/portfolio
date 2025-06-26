@@ -16,14 +16,17 @@
   border-radius: 2px;
 }
 
-.content{
-  width: 900px;
+.content {
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto 0 auto; /* centers horizontally */
+  padding: 0 20px; /* space inside on small screens */
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-left: 300px;
-  margin-top: 20px;
+  flex-wrap: wrap; /* makes it wrap on small screens */
 }
+
 .content2{
   width: 800px;
   display: flex;
@@ -56,4 +59,13 @@
     color: #588061;
     font-weight: 500;
 } 
+/* media query */
+@media(max-width:480px){
+ .content{
+  width: 300px;
+ }
+ .head{
+  padding-top: 40px;
+ }
+}
 

@@ -1,27 +1,95 @@
-.navbar{
-    display: flex;
-    background-color: #bfd6c4;
-    color: black;
-    padding: 25px;
-    text-align: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
+/* Base desktop layout */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #bfd6c4;
+  color: black;
+  padding: 25px 10%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
- 
+  z-index: 1000;
 }
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .sec {
-    display: flex;
-    margin-left: 850px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-.name{
-    margin-left: 20px;
+
+.sec h4 {
+  cursor: pointer;
+  margin: 0;
+  display: block;
 }
-.sec h4{
-    margin-left: 35px;
+
+.sec h4:hover {
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+}
+/* --- RESPONSIVE PART --- */
+@media (max-width: 768px) {
+  .sec {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #bfd6c4;
+    z-index: 999;
+    width: 150px;
+    padding-top: 80px;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 15px;
+  }
+
+  .sec h4 {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
     cursor: pointer;
-}
-.sec h4:hover{
-    color: white;
+    color: black;
+    
+    /* 👇 Add these to make sure it stays visible */
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1001; /* must be higher than .sec's z-index */
+  }
+
+  .hide-mobile-menu {
+    position: fixed;         /* ✅ Fix: Required to make right: -200px work */
+    top: 0;
+    right: -200px;           /* ✅ Pushes menu off screen */
+    bottom: 0;
+    width: 150px;
+    background: #bfd6c4;
+    padding-top: 80px;
+    transition: 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 15px;
+    display: flex;
+    z-index: 999;
+  }
 }
