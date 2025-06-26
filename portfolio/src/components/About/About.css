@@ -60,7 +60,7 @@
     font-weight: 500;
 } 
 /* media query */
-@media(max-width:480px){
+@media(max-width:800px){
  .content{
   width: 300px;
  }
