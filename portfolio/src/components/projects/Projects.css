@@ -1,95 +1,132 @@
-.head{
-    margin-top: 30px;
-}
-.underline{
-    background-color: #bfd6c4;
-    width: 80px;
-    margin-left: 728px
-}
-.projects{
-  margin-top: 60px;
- 
-}
-/* .all{
-    margin-bottom: 80px;
-    margin-top: 70px;
-    display: flex;
-    
-} */
- .all {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 20px 0;
-  margin-bottom: 80px;
-  margin: 0 50px 80px 25px;
-  /* 👇 This makes scrollbar visible */
-  scrollbar-color:gray transparent;
-  scrollbar-width: thick;
-  margin-left: 25px;
-  margin-right: 25px;
- 
+/* Head Section */
+.head {
+  margin-top: 30px;
+  text-align: center;
 }
 
-/* Optional: Style Webkit scrollbar (Chrome, Edge) */
+.underline {
+  background-color: #bfd6c4;
+  width: 80px;
+  height: 4px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.projects {
+  margin-top: 40px;
+}
+
+/* Projects Container */
+.all {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 20px;
+  margin: 0 auto 60px auto;
+  max-width: 100%;
+  scrollbar-color: gray transparent;
+  scrollbar-width: thin;
+}
+
 .all::-webkit-scrollbar {
-  height: 8px;
-  
+  height: 6px;
 }
 
 .all::-webkit-scrollbar-thumb {
   background: #bfd6c4;
   border-radius: 8px;
-   
 }
 
 .all::-webkit-scrollbar-track {
   background: transparent;
-  
 }
 
-/* one */
+/* Switch to grid on larger screens to fill empty space */
+@media (min-width: 768px) {
+  .all {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    overflow-x: hidden;
+    justify-items: center;
+  }
+}
+
+/* Project Card */
 .one {
-    flex: 0 0 16rem; 
-    border: 1px solid #d7dbd8;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    width: 230px;
-    height: 300px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow: hidden;
-    text-overflow: hidden;
+  flex: 0 0 240px;
+  border: 1px solid #d7dbd8;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 .one:hover {
-    transform: scale(0.95); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-.one img{
-    width: 236px;
-    height: 204px;
-    margin-left: 12px;
-    margin-bottom: 8px;
+
+.one img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
+
 .one a {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
 
-.one a h5 {
-  text-decoration: none;
-  margin-left: 40px;
-  margin-bottom: 5px;
-}
-.one:hover {
-  transform: translateY(-8px);
+.one h5 {
+  font-size: 16px;
+  text-align: center;
+  margin: 8px 0;
 }
 
-.one p{
+.one p {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 8px;
+  line-height: 1.4;
+  height: 60px;
+  overflow: hidden;
+}
+
+.one a {
   font-size: 13px;
+  text-align: center;
+  display: block;
+  margin-top: auto;
+  color: #212EA0;
+}
+
+.one a:hover {
+  color: rgb(114, 114, 207);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 500px) {
+  .one {
+    flex: 0 0 200px;
+  }
+
+  .one h5 {
+    font-size: 15px;
+  }
+
+  .one p {
+    font-size: 13px;
+    height: 50px;
+  }
 }
