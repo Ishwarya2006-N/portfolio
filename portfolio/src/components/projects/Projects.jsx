@@ -5,6 +5,7 @@ import jobfinder from '../../assets/jobfinder.png'
 import rbooksky from '../../assets/rbooksky.png'
 import quiz from '../../assets/quiz.png'
 import college from '../../assets/college.png'
+import clg from '../../assets/clg.png'
 const Projects = () => {
   return (
     <div className='projects'>
@@ -37,17 +38,10 @@ const Projects = () => {
              through a popup form.</p>
           </a>
         </div>
+        
         <div className="one">
           <a href="https://github.com/Ishwarya2006-N/quizjson">
-          <img src={quiz} alt="project4" />
-          <h5>React.js | JSON server</h5>
-          <p>A React quiz app that fetches questions from a mock API using json-server. 
-            Users can select answers, submit the quiz, and view their score instantly.</p>
-          </a>
-        </div>
-        <div className="one">
-          <a href="https://github.com/Ishwarya2006-N/quizjson">
-          <img src={college} alt="project5" />
+          <img src={clg} alt="project5" />
           <h5>React.js | Responsive</h5>
           <p>Responsive React website for a college layout with components like Navbar, About, Testimonials, Contact & Footer. Built using modern UI.</p>
           </a>
